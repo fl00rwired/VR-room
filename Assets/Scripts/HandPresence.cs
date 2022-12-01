@@ -9,7 +9,8 @@ public class HandPresence : MonoBehaviour
     public InputDeviceCharacteristics controllerCharacteristics;
     public List<GameObject> controllerPrefabs;
     public GameObject handModelPrefab;
-    public Transform transform;
+
+    public Transform transformyo;
     
     private InputDevice targetDevice;
     private GameObject spawnedController;
@@ -46,7 +47,7 @@ public class HandPresence : MonoBehaviour
                 Debug.Log("Did not find corresponding controller model");
             }
 
-            spawnedHandModel = Instantiate(handModelPrefab, transform);
+            spawnedHandModel = Instantiate(handModelPrefab, transformyo);
             handAnimator = spawnedHandModel.GetComponent<Animator>();
         }
     }
